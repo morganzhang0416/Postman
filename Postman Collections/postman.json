@@ -24,12 +24,21 @@
 					}
 				}
 			],
-			"_postman_id": "ce5565a7-aab5-4d4b-a52b-4722d1dde2ce",
+			"id": "ce5565a7-aab5-4d4b-a52b-4722d1dde2ce",
 			"protocolProfileBehavior": {
 				"disabledSystemHeaders": {},
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": {
+						"signatureMethod": "HMAC-SHA256",
+						"version": "1.0",
+						"addParamsToHeader": false,
+						"addEmptyParamsToSign": false
+					}
+				},
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -79,7 +88,7 @@
 					}
 				}
 			],
-			"_postman_id": "17b485aa-3789-44fa-bd56-ba239e2d32f7",
+			"id": "17b485aa-3789-44fa-bd56-ba239e2d32f7",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -111,7 +120,7 @@
 					}
 				}
 			],
-			"_postman_id": "73b0d9df-711c-4f1b-ac75-e22285b90527",
+			"id": "73b0d9df-711c-4f1b-ac75-e22285b90527",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -138,7 +147,7 @@
 					}
 				}
 			],
-			"_postman_id": "589f2543-5b7c-46a7-882c-c2e322a3f124",
+			"id": "589f2543-5b7c-46a7-882c-c2e322a3f124",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -170,7 +179,7 @@
 					}
 				}
 			],
-			"_postman_id": "4782e40c-c7a6-44bf-ab08-244a29f331d0",
+			"id": "4782e40c-c7a6-44bf-ab08-244a29f331d0",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -185,10 +194,7 @@
 							"value": "top",
 							"type": "text"
 						}
-					],
-					"options": {
-						"formdata": {}
-					}
+					]
 				},
 				"url": "https://automationexercise.com/api/searchProduct"
 			},
@@ -196,7 +202,7 @@
 		},
 		{
 			"name": "Post To Search Product Without Search Product Parameter",
-			"_postman_id": "17abc9b0-d2a4-4b7c-9297-a8d64e02bbf8",
+			"id": "17abc9b0-d2a4-4b7c-9297-a8d64e02bbf8",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -215,7 +221,7 @@
 		},
 		{
 			"name": "Post To Verfy Login With Valid Details",
-			"_postman_id": "92e1cdb4-61c4-4d6d-979b-3c46e331e8a1",
+			"id": "92e1cdb4-61c4-4d6d-979b-3c46e331e8a1",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -235,10 +241,7 @@
 							"value": "stevenzhang",
 							"type": "text"
 						}
-					],
-					"options": {
-						"formdata": {}
-					}
+					]
 				},
 				"url": "https://automationexercise.com/api/verifyLogin"
 			},
@@ -246,7 +249,7 @@
 		},
 		{
 			"name": "Post To Verify Login without email parameter",
-			"_postman_id": "29df040d-d30b-44ec-8fa6-6376f027a5bc",
+			"id": "29df040d-d30b-44ec-8fa6-6376f027a5bc",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -261,10 +264,7 @@
 							"value": "stevenzhang",
 							"type": "text"
 						}
-					],
-					"options": {
-						"formdata": {}
-					}
+					]
 				},
 				"url": "https://automationexercise.com/api/verifyLogin"
 			},
@@ -272,7 +272,7 @@
 		},
 		{
 			"name": "Delete To Verify Login",
-			"_postman_id": "56d554e7-a90a-42e0-b7d0-ff28c5aef222",
+			"id": "56d554e7-a90a-42e0-b7d0-ff28c5aef222",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -285,7 +285,7 @@
 		},
 		{
 			"name": "Post to verify Login with Invalid details",
-			"_postman_id": "0da5ea84-d09d-448a-a574-8cd5d9cd5d85",
+			"id": "0da5ea84-d09d-448a-a574-8cd5d9cd5d85",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -305,10 +305,7 @@
 							"value": "stevenz",
 							"type": "text"
 						}
-					],
-					"options": {
-						"formdata": {}
-					}
+					]
 				},
 				"url": "https://automationexercise.com/api/verifyLogin"
 			},
@@ -316,7 +313,7 @@
 		},
 		{
 			"name": "Put method to update user account",
-			"_postman_id": "e65795e1-652d-449c-a502-b68d0fbdfedd",
+			"id": "e65795e1-652d-449c-a502-b68d0fbdfedd",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -411,10 +408,7 @@
 							"value": "0211866919",
 							"type": "text"
 						}
-					],
-					"options": {
-						"formdata": {}
-					}
+					]
 				},
 				"url": "https://automationexercise.com/api/updateAccount"
 			},
@@ -422,7 +416,7 @@
 		},
 		{
 			"name": "Delete method to delete user account",
-			"_postman_id": "b99ea2ae-db8d-40ca-a62d-ccec595b31c0",
+			"id": "b99ea2ae-db8d-40ca-a62d-ccec595b31c0",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -442,10 +436,7 @@
 							"value": "stevenzhang",
 							"type": "text"
 						}
-					],
-					"options": {
-						"formdata": {}
-					}
+					]
 				},
 				"url": "https://automationexercise.com/api/deleteAccount"
 			},
@@ -453,7 +444,7 @@
 		},
 		{
 			"name": "get user account details by email",
-			"_postman_id": "8e18a42e-53a1-4595-b75a-5b0cbff163f2",
+			"id": "8e18a42e-53a1-4595-b75a-5b0cbff163f2",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
