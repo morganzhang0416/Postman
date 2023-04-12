@@ -1,0 +1,2889 @@
+{
+	"info": {
+		"_postman_id": "63ec3d31-3ec2-4922-921d-1ed56f03dbc5",
+		"name": "FuturesAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LinearPerpetual",
+			"item": [
+				{
+					"name": "Active Orders",
+					"item": [
+						{
+							"name": "Place Active Order",
+							"_postman_id": "07ff2943-9ef9-4ceb-b953-cad17188f5f8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/order/create?side=Buy&symbol=BTCUSDT&order_type=Limit&qty=0.01&price=30000&take_profit=50000&stop_loss=20000&api_key={{bybit-api-key}}&reduce_only=false&close_on_trigger=false&time_in_force=GoodTillCancel&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"order",
+										"create"
+									],
+									"query": [
+										{
+											"key": "side",
+											"value": "Buy"
+										},
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "order_type",
+											"value": "Limit"
+										},
+										{
+											"key": "qty",
+											"value": "0.01"
+										},
+										{
+											"key": "price",
+											"value": "30000"
+										},
+										{
+											"key": "take_profit",
+											"value": "50000"
+										},
+										{
+											"key": "stop_loss",
+											"value": "20000"
+										},
+										{
+											"key": "tp_trigger_by",
+											"value": "MarkPrice",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "reduce_only",
+											"value": "false"
+										},
+										{
+											"key": "close_on_trigger",
+											"value": "false"
+										},
+										{
+											"key": "time_in_force",
+											"value": "GoodTillCancel"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace Active Order",
+							"_postman_id": "c057e1f1-6082-438e-953e-f14066361bfc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/order/replace?order_id=4b467ee6-8f94-4f75-9b72-ee7c706ba9f8&symbol=BTCUSDT&p_r_qty=0.02&p_r_price=29999&take_profit=49999&stop_loss=19999&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"order",
+										"replace"
+									],
+									"query": [
+										{
+											"key": "order_id",
+											"value": "4b467ee6-8f94-4f75-9b72-ee7c706ba9f8"
+										},
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "p_r_qty",
+											"value": "0.02"
+										},
+										{
+											"key": "p_r_price",
+											"value": "29999"
+										},
+										{
+											"key": "take_profit",
+											"value": "49999"
+										},
+										{
+											"key": "stop_loss",
+											"value": "19999"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Active Order(might have delay)",
+							"_postman_id": "5a9a7bce-04f9-4f2e-9407-fcd0fcc98618",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/order/list?symbol=BTCUSDT&order_id=4b467ee6-8f94-4f75-9b72-ee7c706ba9f8&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"order",
+										"list"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "order_id",
+											"value": "4b467ee6-8f94-4f75-9b72-ee7c706ba9f8"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Query Active Order (real-time)",
+							"_postman_id": "93d31563-64d9-4e10-9a39-7f940dc61775",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/order/search?symbol=BTCUSDT&order_id=4b467ee6-8f94-4f75-9b72-ee7c706ba9f8&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"order",
+										"search"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "order_id",
+											"value": "4b467ee6-8f94-4f75-9b72-ee7c706ba9f8"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel Active Order",
+							"_postman_id": "f3fd8380-cdc5-4550-914b-4c4dc0f4c849",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/order/cancel?symbol=BTCUSDT&order_id=db8224eb-0748-47e3-8789-fcd13bf90648&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"order",
+										"cancel"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "order_id",
+											"value": "db8224eb-0748-47e3-8789-fcd13bf90648"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel All Active Orders",
+							"_postman_id": "2e2dcf26-8589-4f46-ae8f-95b153d612c9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/order/cancel-all?symbol=BTCUSDT&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"order",
+										"cancel-all"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "201b1426-c309-478a-8094-71e26b2569be",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Conditional Orders",
+					"item": [
+						{
+							"name": "Place Conditional Order",
+							"_postman_id": "97a87b74-9439-47ff-a7f0-f909bb379ae4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/stop-order/create?side=Buy&symbol=BTCUSDT&order_type=Limit&qty=0.015&price=31000&base_price=30000&stop_px=40000&trigger_by=MarkPrice&take_profit=50000&stop_loss=20000&api_key={{bybit-api-key}}&reduce_only=false&close_on_trigger=false&time_in_force=GoodTillCancel&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"stop-order",
+										"create"
+									],
+									"query": [
+										{
+											"key": "side",
+											"value": "Buy"
+										},
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "order_type",
+											"value": "Limit"
+										},
+										{
+											"key": "qty",
+											"value": "0.015"
+										},
+										{
+											"key": "price",
+											"value": "31000"
+										},
+										{
+											"key": "base_price",
+											"value": "30000"
+										},
+										{
+											"key": "stop_px",
+											"value": "40000"
+										},
+										{
+											"key": "trigger_by",
+											"value": "MarkPrice"
+										},
+										{
+											"key": "take_profit",
+											"value": "50000"
+										},
+										{
+											"key": "stop_loss",
+											"value": "20000"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "reduce_only",
+											"value": "false"
+										},
+										{
+											"key": "close_on_trigger",
+											"value": "false"
+										},
+										{
+											"key": "time_in_force",
+											"value": "GoodTillCancel"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace Conditional Order",
+							"_postman_id": "e1473ac5-5ef9-4df7-be02-00a5541990b3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/stop-order/replace?stop_order_id=4b467ee6-8f94-4f75-9b72-ee7c706ba9f8&symbol=BTCUSDT&p_r_qty=0.02&p_r_price=30999&p_r_trigger_price=39999&take_profit=49999&stop_loss=19999&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"stop-order",
+										"replace"
+									],
+									"query": [
+										{
+											"key": "stop_order_id",
+											"value": "4b467ee6-8f94-4f75-9b72-ee7c706ba9f8"
+										},
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "p_r_qty",
+											"value": "0.02"
+										},
+										{
+											"key": "p_r_price",
+											"value": "30999"
+										},
+										{
+											"key": "p_r_trigger_price",
+											"value": "39999"
+										},
+										{
+											"key": "take_profit",
+											"value": "49999"
+										},
+										{
+											"key": "stop_loss",
+											"value": "19999"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Conditional Order",
+							"_postman_id": "79cbad9b-a9e1-4cb8-86c6-ebccfd667f55",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/stop-order/list?symbol=BTCUSDT&stop_order_id=4b467ee6-8f94-4f75-9b72-ee7c706ba9f8&api_key={{bybit-api-key}}&time_in_force=GoodTillCancel&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"stop-order",
+										"list"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "stop_order_id",
+											"value": "4b467ee6-8f94-4f75-9b72-ee7c706ba9f8"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "time_in_force",
+											"value": "GoodTillCancel"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Query Conditional Order (real-time)",
+							"_postman_id": "69813761-34bf-45f1-b721-9aab9baa5065",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/stop-order/search?symbol=BTCUSDT&stop_order_id=2ad9b9bb-00a1-488c-9f9b-09534aa15967&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"stop-order",
+										"search"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "stop_order_id",
+											"value": "2ad9b9bb-00a1-488c-9f9b-09534aa15967"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel Conditional Order",
+							"_postman_id": "4c9dd304-4afb-4023-8bd6-1b774384cdae",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/stop-order/cancel?symbol=BTCUSDT&stop_order_id=ad88fd6a-b33e-4792-b05d-6092ea34e045&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"stop-order",
+										"cancel"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "stop_order_id",
+											"value": "ad88fd6a-b33e-4792-b05d-6092ea34e045"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel All Conditional Orders",
+							"_postman_id": "7fe0d7b1-6f55-4944-aea8-d50fad2bcadc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/stop-order/cancel-all?symbol=BTCUSDT&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"stop-order",
+										"cancel-all"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "3e45f5f7-db94-40a0-864b-354f6ca02b8a",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Position",
+					"item": [
+						{
+							"name": "My Position",
+							"_postman_id": "b4c669ff-f767-4e12-a61e-92645f87978f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/position/list?symbol=BTCUSDT&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"position",
+										"list"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Set Auto Add Margin",
+							"_postman_id": "3669091f-c2bb-4775-b790-e83ecb8c1c8b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/position/set-auto-add-margin?symbol=BTCUSDT&side=Buy&auto_add_margin=true&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"position",
+										"set-auto-add-margin"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "side",
+											"value": "Buy"
+										},
+										{
+											"key": "auto_add_margin",
+											"value": "true"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cross/Isolated Margin Switch",
+							"_postman_id": "bec45c45-79c7-4b46-971c-74f874eda0b8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/position/switch-isolated?symbol=BTCUSDT&is_isolated=true&buy_leverage=20&sell_leverage=18&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"position",
+										"switch-isolated"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "is_isolated",
+											"value": "true"
+										},
+										{
+											"key": "buy_leverage",
+											"value": "20"
+										},
+										{
+											"key": "sell_leverage",
+											"value": "18"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Full/Partial Position SL/TP Switch",
+							"_postman_id": "79d63936-55c1-4006-82db-1ef774ef68ed",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/tpsl/switch-mode?symbol=BTCUSDT&tp_sl_mode=Partial&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"tpsl",
+										"switch-mode"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "tp_sl_mode",
+											"value": "Partial"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add/Reduce Margin",
+							"_postman_id": "cad33b9c-35a5-4a42-85a3-50a5242250fd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/position/add-margin?symbol=BTCUSDT&side=Buy&margin=-1&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"position",
+										"add-margin"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "side",
+											"value": "Buy"
+										},
+										{
+											"key": "margin",
+											"value": "-1"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Set Leverage",
+							"_postman_id": "80597d4b-0c5d-4100-a6d8-f171aab98989",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/position/set-leverage?symbol=BTCUSDT&buy_leverage=100&sell_leverage=100&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"position",
+										"set-leverage"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "buy_leverage",
+											"value": "100"
+										},
+										{
+											"key": "sell_leverage",
+											"value": "100"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Set Trading-Stop",
+							"_postman_id": "53bbb84a-b608-4a61-bacc-ecfca8e4e831",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/position/trading-stop?symbol=BTCUSDT&side=Buy&take_profit=40000&stop_loss=20000&sl_size=0.5&tp_size=0.4&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"position",
+										"trading-stop"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "side",
+											"value": "Buy"
+										},
+										{
+											"key": "take_profit",
+											"value": "40000"
+										},
+										{
+											"key": "stop_loss",
+											"value": "20000"
+										},
+										{
+											"key": "trailing_stop",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "sl_size",
+											"value": "0.5"
+										},
+										{
+											"key": "tp_size",
+											"value": "0.4"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Trade Records",
+							"_postman_id": "5d26f4a8-cb26-4c4a-b08d-fd3f037a0a7a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/trade/execution/list?symbol=BTCUSDT&exec_type=BustTrade&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"trade",
+										"execution",
+										"list"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "exec_type",
+											"value": "BustTrade"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Closed Profit and Loss",
+							"_postman_id": "1842df1b-6903-4d92-b65b-e4fc1cf08c5c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/trade/closed-pnl/list?symbol=BTCUSDT&exec_type=BustTrade&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"trade",
+										"closed-pnl",
+										"list"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "exec_type",
+											"value": "BustTrade"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "d082e816-46ba-4fb6-8c80-c4845f580b20",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Risk Limit",
+					"item": [
+						{
+							"name": "Set Risk limit",
+							"_postman_id": "f6382f4d-b15e-4187-a16d-a668e87fdd28",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/position/set-risk?symbol=BTCUSDT&side=Buy&risk_id=4&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"position",
+										"set-risk"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "side",
+											"value": "Buy"
+										},
+										{
+											"key": "risk_id",
+											"value": "4"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Risk limit",
+							"_postman_id": "26120d1d-ffc4-44e8-8c20-49b82a0562b0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/public/linear/risk-limit?symbol=BTCUSDT",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"public",
+										"linear",
+										"risk-limit"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "f2b82a7e-d4e6-4ec8-9c0c-1ecb181a2975",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Funding",
+					"item": [
+						{
+							"name": "Predicted Funding Rate and My Funding Fee",
+							"_postman_id": "6d9d41cb-89cc-4665-9ed2-58566f4dad8d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/funding/predicted-funding?symbol=BTCUSDT&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"funding",
+										"predicted-funding"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "My Last Funding Fee",
+							"_postman_id": "52b05027-d23c-4e4a-ac30-3f0d381d37d8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/private/linear/funding/prev-funding?symbol=BTCUSDT&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"private",
+										"linear",
+										"funding",
+										"prev-funding"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "6f8c7899-92c8-4cf5-a990-d425744e1555",
+					"_postman_isSubFolder": true
+				}
+			],
+			"_postman_id": "de5f5294-05c9-4279-ab5d-3fa966ab316e"
+		},
+		{
+			"name": "InversePerpetual",
+			"item": [
+				{
+					"name": "Active Orders",
+					"item": [
+						{
+							"name": "Place Active Order",
+							"_postman_id": "01f2bb89-08c4-4542-a1fd-81b2bc93d064",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/order/create?side=Buy&symbol=BTCUSD&order_type=Market&qty=10&api_key={{bybit-api-key}}&reduce_only=false&close_on_trigger=false&time_in_force=GoodTillCancel&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"order",
+										"create"
+									],
+									"query": [
+										{
+											"key": "side",
+											"value": "Buy"
+										},
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "order_type",
+											"value": "Market"
+										},
+										{
+											"key": "qty",
+											"value": "10"
+										},
+										{
+											"key": "price",
+											"value": "30000",
+											"disabled": true
+										},
+										{
+											"key": "take_profit",
+											"value": "50000",
+											"disabled": true
+										},
+										{
+											"key": "stop_loss",
+											"value": "20000",
+											"disabled": true
+										},
+										{
+											"key": "tp_trigger_by",
+											"value": "MarkPrice",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "reduce_only",
+											"value": "false"
+										},
+										{
+											"key": "close_on_trigger",
+											"value": "false"
+										},
+										{
+											"key": "time_in_force",
+											"value": "GoodTillCancel"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace Active Order",
+							"_postman_id": "8c3f4143-8535-4282-b3f0-2af1d8d443cc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/order/replace?order_id=4de2bb7a-073a-4367-b378-7a76a2c85808&symbol=BTCUSD&p_r_qty=20&p_r_price=29999&take_profit=49999&stop_loss=19999&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"order",
+										"replace"
+									],
+									"query": [
+										{
+											"key": "order_id",
+											"value": "4de2bb7a-073a-4367-b378-7a76a2c85808"
+										},
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "p_r_qty",
+											"value": "20"
+										},
+										{
+											"key": "p_r_price",
+											"value": "29999"
+										},
+										{
+											"key": "take_profit",
+											"value": "49999"
+										},
+										{
+											"key": "stop_loss",
+											"value": "19999"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Active Order(might have delay)",
+							"_postman_id": "31f9fcfd-82cf-4a2f-87a4-5bfc8ed25427",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/order/list?symbol=BTCUSD&order_id=4de2bb7a-073a-4367-b378-7a76a2c85808&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"order",
+										"list"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "order_id",
+											"value": "4de2bb7a-073a-4367-b378-7a76a2c85808"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Query Active Order (real-time)",
+							"_postman_id": "5336f203-d7c7-4ff8-b526-97c6f5b17eda",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/order?symbol=BTCUSD&order_id=4de2bb7a-073a-4367-b378-7a76a2c85808&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"order"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "order_id",
+											"value": "4de2bb7a-073a-4367-b378-7a76a2c85808"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel Active Order",
+							"_postman_id": "3db79727-0183-4113-a996-0886b54f7449",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/order/cancel?symbol=BTCUSD&order_id=4de2bb7a-073a-4367-b378-7a76a2c85808&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"order",
+										"cancel"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "order_id",
+											"value": "4de2bb7a-073a-4367-b378-7a76a2c85808"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel All Active Orders",
+							"_postman_id": "e3c2169b-1ba1-4207-8481-d1290599d979",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/order/cancelAll?symbol=BTCUSD&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"order",
+										"cancelAll"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "b42b7b54-a2b1-4b71-adb6-af2ba581fb48",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Conditional Orders",
+					"item": [
+						{
+							"name": "Place Conditional Order",
+							"_postman_id": "78b11222-43fe-4667-a421-e091c9ce2d81",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/stop-order/create?side=Buy&symbol=BTCUSD&order_type=Limit&qty=10&price=31000&base_price=30000&stop_px=40000&trigger_by=MarkPrice&take_profit=50000&stop_loss=20000&api_key={{bybit-api-key}}&reduce_only=false&close_on_trigger=false&time_in_force=GoodTillCancel&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"stop-order",
+										"create"
+									],
+									"query": [
+										{
+											"key": "side",
+											"value": "Buy"
+										},
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "order_type",
+											"value": "Limit"
+										},
+										{
+											"key": "qty",
+											"value": "10"
+										},
+										{
+											"key": "price",
+											"value": "31000"
+										},
+										{
+											"key": "base_price",
+											"value": "30000"
+										},
+										{
+											"key": "stop_px",
+											"value": "40000"
+										},
+										{
+											"key": "trigger_by",
+											"value": "MarkPrice"
+										},
+										{
+											"key": "take_profit",
+											"value": "50000"
+										},
+										{
+											"key": "stop_loss",
+											"value": "20000"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "reduce_only",
+											"value": "false"
+										},
+										{
+											"key": "close_on_trigger",
+											"value": "false"
+										},
+										{
+											"key": "time_in_force",
+											"value": "GoodTillCancel"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace Conditional Order",
+							"_postman_id": "a83f7f16-cd87-4f17-86cc-d499c024a77c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/stop-order/replace?stop_order_id=cb1a668f-5e96-4fb0-8b5b-7d8c5265894b&symbol=BTCUSD&p_r_qty=25&p_r_price=29999&take_profit=49999&stop_loss=19999&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"stop-order",
+										"replace"
+									],
+									"query": [
+										{
+											"key": "stop_order_id",
+											"value": "cb1a668f-5e96-4fb0-8b5b-7d8c5265894b"
+										},
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "p_r_qty",
+											"value": "25"
+										},
+										{
+											"key": "p_r_price",
+											"value": "29999"
+										},
+										{
+											"key": "take_profit",
+											"value": "49999"
+										},
+										{
+											"key": "stop_loss",
+											"value": "19999"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Conditional Order",
+							"_postman_id": "eb3e4c46-965d-4080-85d2-641ffbb45e02",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/stop-order/list?symbol=BTCUSD&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"stop-order",
+										"list"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Query Conditional Order (real-time)",
+							"_postman_id": "fcf7d812-5c71-4544-b7fe-f02d89ea8e7f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/stop-order/list?symbol=BTCUSD&stop_order_id=cb1a668f-5e96-4fb0-8b5b-7d8c5265894b&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"stop-order",
+										"list"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "stop_order_id",
+											"value": "cb1a668f-5e96-4fb0-8b5b-7d8c5265894b"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel Conditional Order",
+							"_postman_id": "ea53c9c9-cb8f-482f-a047-7b508bdc55f8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/stop-order/cancel?symbol=BTCUSD&stop_order_id=cb1a668f-5e96-4fb0-8b5b-7d8c5265894b&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"stop-order",
+										"cancel"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "stop_order_id",
+											"value": "cb1a668f-5e96-4fb0-8b5b-7d8c5265894b"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel All Conditional Orders",
+							"_postman_id": "03fcb89b-9c39-4c24-a3ae-37fbfa20920c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/stop-order/cancelAll?symbol=BTCUSD&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"stop-order",
+										"cancelAll"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "729b728c-a3b7-4acf-81b9-302c793cfca6",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Position",
+					"item": [
+						{
+							"name": "My Position",
+							"_postman_id": "0f67ce19-3675-4643-85c3-47428f5aeb0a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/position/list?symbol=BTCUSD&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"position",
+										"list"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change Margin",
+							"_postman_id": "0df0f62a-2575-4ac5-8271-15e54115e209",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/position/change-position-margin?symbol=BTCUSD&margin=0.00005&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"position",
+										"change-position-margin"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "margin",
+											"value": "0.00005"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Set Trading-Stop",
+							"_postman_id": "45b5f6df-d41f-4a45-8b99-aa7c5f40a2bd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/position/trading-stop?symbol=BTCUSD&side=Buy&stop_loss=20000&sl_size=5&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"position",
+										"trading-stop"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "side",
+											"value": "Buy"
+										},
+										{
+											"key": "take_profit",
+											"value": "40001",
+											"disabled": true
+										},
+										{
+											"key": "stop_loss",
+											"value": "20000"
+										},
+										{
+											"key": "trailing_stop",
+											"value": "100",
+											"disabled": true
+										},
+										{
+											"key": "sl_size",
+											"value": "5"
+										},
+										{
+											"key": "tp_size",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Set Leverage",
+							"_postman_id": "95175dd1-f87b-43c9-a9ac-cb249e5d98e6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/position/leverage/save?symbol=BTCUSD&buy_leverage=5&sell_leverage=5&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"position",
+										"leverage",
+										"save"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "buy_leverage",
+											"value": "5"
+										},
+										{
+											"key": "sell_leverage",
+											"value": "5"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Trade Records",
+							"_postman_id": "8e85730e-5ea3-4169-9af3-96fd8ec5dd17",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/execution/list?symbol=BTCUSD&exec_type=BustTrade&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"execution",
+										"list"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "exec_type",
+											"value": "BustTrade"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Closed Profit and Loss",
+							"_postman_id": "7dce4a47-d532-407d-938a-dec3fdcdadb8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/trade/closed-pnl/list?symbol=BTCUSD&exec_type=Trade&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"trade",
+										"closed-pnl",
+										"list"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "exec_type",
+											"value": "Trade"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Position Mode Switch (only testnet for now)",
+							"_postman_id": "cfa9787e-5579-4403-9c4d-458d39bfd754",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/position/switch-mode?symbol=BTCUSD&mode=0&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"position",
+										"switch-mode"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "mode",
+											"value": "0"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Full/Partial Position SL/TP Switch",
+							"_postman_id": "e6ab26c9-1a5b-42bb-9852-1bfeb837ed5c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/tpsl/switch-mode?symbol=BTCUSD&tp_sl_mode=Partial&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"tpsl",
+										"switch-mode"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "tp_sl_mode",
+											"value": "Partial"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cross/Isolated Margin Switch",
+							"_postman_id": "484f61e5-7693-4728-a60a-46067aa692f3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/position/switch-isolated?symbol=BTCUSD&is_isolated=true&buy_leverage=4&sell_leverage=4&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"position",
+										"switch-isolated"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "is_isolated",
+											"value": "true"
+										},
+										{
+											"key": "buy_leverage",
+											"value": "4"
+										},
+										{
+											"key": "sell_leverage",
+											"value": "4"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "a82fad01-cfcd-4f17-8571-bbd6618c73a6",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Risk Limit",
+					"item": [
+						{
+							"name": "Set Risk Limit",
+							"_postman_id": "8a3813d4-7b93-473c-b59b-2a99f9ecc1e1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/position/risk-limit?symbol=BTCUSD&risk_id=2&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"position",
+										"risk-limit"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "risk_id",
+											"value": "2"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Risk Limit",
+							"_postman_id": "efa02ffb-cec5-4bd1-b013-e90b5f88ff0e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/public/risk-limit/list?symbol=XRPUSD",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"public",
+										"risk-limit",
+										"list"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "XRPUSD"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "edee28a4-f1c6-439e-89e5-0eda4c7cdb43",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Funding",
+					"item": [
+						{
+							"name": "Get the Last Funding Rate",
+							"_postman_id": "76a8857b-2aea-4939-be28-15448ad5bb6d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/public/funding/prev-funding-rate?symbol=BTCUSD&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"public",
+										"funding",
+										"prev-funding-rate"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "My Last Funding Fee",
+							"_postman_id": "3206992b-7586-4dd7-b58a-1e21886a5a61",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/funding/prev-funding?symbol=BTCUSD&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"funding",
+										"prev-funding"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Predicted Funding Rate and My Funding Fee",
+							"_postman_id": "c44f6093-265a-4a9d-a30a-ded83f2d2652",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v2/private/funding/predicted-funding?symbol=BTCUSD&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v2",
+										"private",
+										"funding",
+										"predicted-funding"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSD"
+										},
+										{
+											"key": "api_key",
+											"value": "{{bybit-api-key}}"
+										},
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "sign",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "1ceb20b6-1afc-421f-9c3a-0ea4343263e1",
+					"_postman_isSubFolder": true
+				}
+			],
+			"_postman_id": "e809d59e-7b7b-43f8-89d7-813066d60ddc"
+		},
+		{
+			"name": "General",
+			"item": [
+				{
+					"name": "Get api key info",
+					"_postman_id": "7bb631f8-ba59-4b03-8691-bed18cef485d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v2/private/account/api-key?timestamp={{timestamp}}&api_key={{bybit-api-key}}&sign={{signature}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"private",
+								"account",
+								"api-key"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "api_key",
+									"value": "{{bybit-api-key}}"
+								},
+								{
+									"key": "sign",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LCP Info",
+					"_postman_id": "3fa8f352-25e0-44ce-8f51-e0f68a202e9d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v2/private/account/lcp?timestamp={{timestamp}}&symbol=BTCUSD&api_key={{bybit-api-key}}&sign={{signature}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"private",
+								"account",
+								"lcp"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "symbol",
+									"value": "BTCUSD"
+								},
+								{
+									"key": "api_key",
+									"value": "{{bybit-api-key}}"
+								},
+								{
+									"key": "sign",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "5d162558-3cd4-4362-be8b-89693c71ee8c"
+		},
+		{
+			"name": "WalletDataEndpoints",
+			"item": [
+				{
+					"name": "Get Wallet Balance",
+					"_postman_id": "dd1877ef-2420-4461-8bef-0c0f18ec8615",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v2/private/wallet/balance?timestamp={{timestamp}}&api_key={{bybit-api-key}}&sign={{signature}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"private",
+								"wallet",
+								"balance"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "api_key",
+									"value": "{{bybit-api-key}}"
+								},
+								{
+									"key": "sign",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "59e0d72b-5fe9-4218-a60c-08bd162144ad"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"const ts  = Date.now();",
+					"pm.environment.set(\"timestamp\", ts);",
+					"",
+					"let paramsObject = {};",
+					"",
+					"const bybit_api_secret = pm.environment.get(\"bybit-api-secret\");",
+					"",
+					"const parameters = pm.request.url.query;",
+					"console.log(\"start\");",
+					"console.log(parameters);",
+					"",
+					"parameters.map((param) => {",
+					"    if (param.key != 'sign' && ",
+					"        //param.key != 'timestamp' && ",
+					"        !is_empty(param.value) &&",
+					"        !is_disabled(param.disabled)) {",
+					"            if(param.key=='timestamp'){",
+					"                paramsObject[param.key] = ts;",
+					"            }",
+					"            else if(param.key=='api_key'){",
+					"                paramsObject[param.key] = pm.environment.get(\"bybit-api-key\");",
+					"            }",
+					"            else{",
+					"                paramsObject[param.key] = decodeURIComponent(param.value);",
+					"            }",
+					"            //console.log(encodeURIComponent(param.value));",
+					"            //pm.environment.set(param.key, encodeURIComponent(param.value));",
+					"    }",
+					"})",
+					"        ",
+					"//Object.assign(paramsObject, {'timestamp': ts});",
+					"",
+					"if (bybit_api_secret) {",
+					"    const queryString = Object.keys(paramsObject).sort().map((key) => {",
+					"        return `${key}=${paramsObject[key]}`;",
+					"    }).join('&');",
+					"    console.log(queryString);",
+					"    const signature = CryptoJS.HmacSHA256(queryString, bybit_api_secret).toString();",
+					"    pm.environment.set(\"signature\", signature);",
+					"}",
+					"",
+					"",
+					"function is_disabled(str) {",
+					"    return str == true;",
+					"}",
+					"",
+					"function is_empty(str) {",
+					"    if (typeof str == 'undefined' ||",
+					"        !str || ",
+					"        str.length === 0 || ",
+					"        str === \"\" ||",
+					"        !/[^\\s]/.test(str) ||",
+					"        /^\\s*$/.test(str) ||",
+					"        str.replace(/\\s/g,\"\") === \"\")",
+					"    {",
+					"        return true;",
+					"    }",
+					"    else",
+					"    {",
+					"        return false;",
+					"    }",
+					"}"
+				],
+				"id": "bbd3e7e8-6294-4acd-b1da-cdb7ce48a1de"
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				],
+				"id": "d589f8d9-3c21-4543-8669-ff462b48b280"
+			}
+		}
+	]
+}
