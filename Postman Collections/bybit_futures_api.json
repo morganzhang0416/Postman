@@ -104,7 +104,7 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/private/linear/order/replace?order_id=4b467ee6-8f94-4f75-9b72-ee7c706ba9f8&symbol=BTCUSDT&p_r_qty=0.01&p_r_price=29999&take_profit=49999&stop_loss=19999&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"raw": "{{url}}/private/linear/order/replace?order_id=4b467ee6-8f94-4f75-9b72-ee7c706ba9f8&symbol=BTCUSDT&p_r_qty=0.02&p_r_price=29999&take_profit=49999&stop_loss=19999&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
 									"host": [
 										"{{url}}"
 									],
@@ -125,7 +125,7 @@
 										},
 										{
 											"key": "p_r_qty",
-											"value": "0.01"
+											"value": "0.02"
 										},
 										{
 											"key": "p_r_price",
@@ -166,7 +166,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/private/linear/order/list?symbol=BTCUSDT&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"raw": "{{url}}/private/linear/order/list?symbol=BTCUSDT&order_id=4b467ee6-8f94-4f75-9b72-ee7c706ba9f8&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
 									"host": [
 										"{{url}}"
 									],
@@ -183,8 +183,7 @@
 										},
 										{
 											"key": "order_id",
-											"value": "4b467ee6-8f94-4f75-9b72-ee7c706ba9f8",
-											"disabled": true
+											"value": "4b467ee6-8f94-4f75-9b72-ee7c706ba9f8"
 										},
 										{
 											"key": "api_key",
