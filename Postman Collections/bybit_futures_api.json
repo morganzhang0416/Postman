@@ -166,7 +166,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/private/linear/order/list?symbol=BTCUSDT&order_id=4b467ee6-8f94-4f75-9b72-ee7c706ba9f8&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"raw": "{{url}}/private/linear/order/list?symbol=BTCUSDT&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
 									"host": [
 										"{{url}}"
 									],
@@ -183,7 +183,8 @@
 										},
 										{
 											"key": "order_id",
-											"value": "4b467ee6-8f94-4f75-9b72-ee7c706ba9f8"
+											"value": "4b467ee6-8f94-4f75-9b72-ee7c706ba9f8",
+											"disabled": true
 										},
 										{
 											"key": "api_key",
