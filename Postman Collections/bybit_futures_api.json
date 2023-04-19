@@ -13,7 +13,7 @@
 					"item": [
 						{
 							"name": "Place Active Order",
-							"_postman_id": "07ff2943-9ef9-4ceb-b953-cad17188f5f8",
+							"id": "07ff2943-9ef9-4ceb-b953-cad17188f5f8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -96,7 +96,7 @@
 						},
 						{
 							"name": "Replace Active Order",
-							"_postman_id": "c057e1f1-6082-438e-953e-f14066361bfc",
+							"id": "c057e1f1-6082-438e-953e-f14066361bfc",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -158,7 +158,7 @@
 						},
 						{
 							"name": "Get Active Order(might have delay)",
-							"_postman_id": "5a9a7bce-04f9-4f2e-9407-fcd0fcc98618",
+							"id": "5a9a7bce-04f9-4f2e-9407-fcd0fcc98618",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -204,7 +204,7 @@
 						},
 						{
 							"name": "Query Active Order (real-time)",
-							"_postman_id": "93d31563-64d9-4e10-9a39-7f940dc61775",
+							"id": "93d31563-64d9-4e10-9a39-7f940dc61775",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -250,7 +250,7 @@
 						},
 						{
 							"name": "Cancel Active Order",
-							"_postman_id": "f3fd8380-cdc5-4550-914b-4c4dc0f4c849",
+							"id": "f3fd8380-cdc5-4550-914b-4c4dc0f4c849",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -296,7 +296,7 @@
 						},
 						{
 							"name": "Cancel All Active Orders",
-							"_postman_id": "2e2dcf26-8589-4f46-ae8f-95b153d612c9",
+							"id": "2e2dcf26-8589-4f46-ae8f-95b153d612c9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -337,15 +337,14 @@
 							"response": []
 						}
 					],
-					"_postman_id": "201b1426-c309-478a-8094-71e26b2569be",
-					"_postman_isSubFolder": true
+					"id": "201b1426-c309-478a-8094-71e26b2569be"
 				},
 				{
 					"name": "Conditional Orders",
 					"item": [
 						{
 							"name": "Place Conditional Order",
-							"_postman_id": "97a87b74-9439-47ff-a7f0-f909bb379ae4",
+							"id": "97a87b74-9439-47ff-a7f0-f909bb379ae4",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -435,7 +434,7 @@
 						},
 						{
 							"name": "Replace Conditional Order",
-							"_postman_id": "e1473ac5-5ef9-4df7-be02-00a5541990b3",
+							"id": "e1473ac5-5ef9-4df7-be02-00a5541990b3",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -501,7 +500,7 @@
 						},
 						{
 							"name": "Get Conditional Order",
-							"_postman_id": "79cbad9b-a9e1-4cb8-86c6-ebccfd667f55",
+							"id": "79cbad9b-a9e1-4cb8-86c6-ebccfd667f55",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -551,7 +550,7 @@
 						},
 						{
 							"name": "Query Conditional Order (real-time)",
-							"_postman_id": "69813761-34bf-45f1-b721-9aab9baa5065",
+							"id": "69813761-34bf-45f1-b721-9aab9baa5065",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -559,7 +558,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/private/linear/stop-order/search?symbol=BTCUSDT&stop_order_id=2ad9b9bb-00a1-488c-9f9b-09534aa15967&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
+									"raw": "{{url}}/private/linear/stop-order/search?symbol=BTCUSDT&api_key={{bybit-api-key}}&timestamp={{timestamp}}&sign={{signature}}",
 									"host": [
 										"{{url}}"
 									],
@@ -576,7 +575,8 @@
 										},
 										{
 											"key": "stop_order_id",
-											"value": "2ad9b9bb-00a1-488c-9f9b-09534aa15967"
+											"value": "2ad9b9bb-00a1-488c-9f9b-09534aa15967",
+											"disabled": true
 										},
 										{
 											"key": "api_key",
@@ -597,7 +597,7 @@
 						},
 						{
 							"name": "Cancel Conditional Order",
-							"_postman_id": "4c9dd304-4afb-4023-8bd6-1b774384cdae",
+							"id": "4c9dd304-4afb-4023-8bd6-1b774384cdae",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -643,7 +643,7 @@
 						},
 						{
 							"name": "Cancel All Conditional Orders",
-							"_postman_id": "7fe0d7b1-6f55-4944-aea8-d50fad2bcadc",
+							"id": "7fe0d7b1-6f55-4944-aea8-d50fad2bcadc",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -684,15 +684,14 @@
 							"response": []
 						}
 					],
-					"_postman_id": "3e45f5f7-db94-40a0-864b-354f6ca02b8a",
-					"_postman_isSubFolder": true
+					"id": "3e45f5f7-db94-40a0-864b-354f6ca02b8a"
 				},
 				{
 					"name": "Position",
 					"item": [
 						{
 							"name": "My Position",
-							"_postman_id": "b4c669ff-f767-4e12-a61e-92645f87978f",
+							"id": "b4c669ff-f767-4e12-a61e-92645f87978f",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -734,7 +733,7 @@
 						},
 						{
 							"name": "Set Auto Add Margin",
-							"_postman_id": "3669091f-c2bb-4775-b790-e83ecb8c1c8b",
+							"id": "3669091f-c2bb-4775-b790-e83ecb8c1c8b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -784,7 +783,7 @@
 						},
 						{
 							"name": "Cross/Isolated Margin Switch",
-							"_postman_id": "bec45c45-79c7-4b46-971c-74f874eda0b8",
+							"id": "bec45c45-79c7-4b46-971c-74f874eda0b8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -838,7 +837,7 @@
 						},
 						{
 							"name": "Full/Partial Position SL/TP Switch",
-							"_postman_id": "79d63936-55c1-4006-82db-1ef774ef68ed",
+							"id": "79d63936-55c1-4006-82db-1ef774ef68ed",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -884,7 +883,7 @@
 						},
 						{
 							"name": "Add/Reduce Margin",
-							"_postman_id": "cad33b9c-35a5-4a42-85a3-50a5242250fd",
+							"id": "cad33b9c-35a5-4a42-85a3-50a5242250fd",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -934,7 +933,7 @@
 						},
 						{
 							"name": "Set Leverage",
-							"_postman_id": "80597d4b-0c5d-4100-a6d8-f171aab98989",
+							"id": "80597d4b-0c5d-4100-a6d8-f171aab98989",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -984,7 +983,7 @@
 						},
 						{
 							"name": "Set Trading-Stop",
-							"_postman_id": "53bbb84a-b608-4a61-bacc-ecfca8e4e831",
+							"id": "53bbb84a-b608-4a61-bacc-ecfca8e4e831",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1051,7 +1050,7 @@
 						},
 						{
 							"name": "User Trade Records",
-							"_postman_id": "5d26f4a8-cb26-4c4a-b08d-fd3f037a0a7a",
+							"id": "5d26f4a8-cb26-4c4a-b08d-fd3f037a0a7a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1098,7 +1097,7 @@
 						},
 						{
 							"name": "Closed Profit and Loss",
-							"_postman_id": "1842df1b-6903-4d92-b65b-e4fc1cf08c5c",
+							"id": "1842df1b-6903-4d92-b65b-e4fc1cf08c5c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1144,15 +1143,14 @@
 							"response": []
 						}
 					],
-					"_postman_id": "d082e816-46ba-4fb6-8c80-c4845f580b20",
-					"_postman_isSubFolder": true
+					"id": "d082e816-46ba-4fb6-8c80-c4845f580b20"
 				},
 				{
 					"name": "Risk Limit",
 					"item": [
 						{
 							"name": "Set Risk limit",
-							"_postman_id": "f6382f4d-b15e-4187-a16d-a668e87fdd28",
+							"id": "f6382f4d-b15e-4187-a16d-a668e87fdd28",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1202,7 +1200,7 @@
 						},
 						{
 							"name": "Get Risk limit",
-							"_postman_id": "26120d1d-ffc4-44e8-8c20-49b82a0562b0",
+							"id": "26120d1d-ffc4-44e8-8c20-49b82a0562b0",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1230,15 +1228,14 @@
 							"response": []
 						}
 					],
-					"_postman_id": "f2b82a7e-d4e6-4ec8-9c0c-1ecb181a2975",
-					"_postman_isSubFolder": true
+					"id": "f2b82a7e-d4e6-4ec8-9c0c-1ecb181a2975"
 				},
 				{
 					"name": "Funding",
 					"item": [
 						{
 							"name": "Predicted Funding Rate and My Funding Fee",
-							"_postman_id": "6d9d41cb-89cc-4665-9ed2-58566f4dad8d",
+							"id": "6d9d41cb-89cc-4665-9ed2-58566f4dad8d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1280,7 +1277,7 @@
 						},
 						{
 							"name": "My Last Funding Fee",
-							"_postman_id": "52b05027-d23c-4e4a-ac30-3f0d381d37d8",
+							"id": "52b05027-d23c-4e4a-ac30-3f0d381d37d8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1321,11 +1318,10 @@
 							"response": []
 						}
 					],
-					"_postman_id": "6f8c7899-92c8-4cf5-a990-d425744e1555",
-					"_postman_isSubFolder": true
+					"id": "6f8c7899-92c8-4cf5-a990-d425744e1555"
 				}
 			],
-			"_postman_id": "de5f5294-05c9-4279-ab5d-3fa966ab316e"
+			"id": "de5f5294-05c9-4279-ab5d-3fa966ab316e"
 		},
 		{
 			"name": "InversePerpetual",
@@ -1335,7 +1331,7 @@
 					"item": [
 						{
 							"name": "Place Active Order",
-							"_postman_id": "01f2bb89-08c4-4542-a1fd-81b2bc93d064",
+							"id": "01f2bb89-08c4-4542-a1fd-81b2bc93d064",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1421,7 +1417,7 @@
 						},
 						{
 							"name": "Replace Active Order",
-							"_postman_id": "8c3f4143-8535-4282-b3f0-2af1d8d443cc",
+							"id": "8c3f4143-8535-4282-b3f0-2af1d8d443cc",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1483,7 +1479,7 @@
 						},
 						{
 							"name": "Get Active Order(might have delay)",
-							"_postman_id": "31f9fcfd-82cf-4a2f-87a4-5bfc8ed25427",
+							"id": "31f9fcfd-82cf-4a2f-87a4-5bfc8ed25427",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1529,7 +1525,7 @@
 						},
 						{
 							"name": "Query Active Order (real-time)",
-							"_postman_id": "5336f203-d7c7-4ff8-b526-97c6f5b17eda",
+							"id": "5336f203-d7c7-4ff8-b526-97c6f5b17eda",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1574,7 +1570,7 @@
 						},
 						{
 							"name": "Cancel Active Order",
-							"_postman_id": "3db79727-0183-4113-a996-0886b54f7449",
+							"id": "3db79727-0183-4113-a996-0886b54f7449",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1620,7 +1616,7 @@
 						},
 						{
 							"name": "Cancel All Active Orders",
-							"_postman_id": "e3c2169b-1ba1-4207-8481-d1290599d979",
+							"id": "e3c2169b-1ba1-4207-8481-d1290599d979",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1661,15 +1657,14 @@
 							"response": []
 						}
 					],
-					"_postman_id": "b42b7b54-a2b1-4b71-adb6-af2ba581fb48",
-					"_postman_isSubFolder": true
+					"id": "b42b7b54-a2b1-4b71-adb6-af2ba581fb48"
 				},
 				{
 					"name": "Conditional Orders",
 					"item": [
 						{
 							"name": "Place Conditional Order",
-							"_postman_id": "78b11222-43fe-4667-a421-e091c9ce2d81",
+							"id": "78b11222-43fe-4667-a421-e091c9ce2d81",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1759,7 +1754,7 @@
 						},
 						{
 							"name": "Replace Conditional Order",
-							"_postman_id": "a83f7f16-cd87-4f17-86cc-d499c024a77c",
+							"id": "a83f7f16-cd87-4f17-86cc-d499c024a77c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1821,7 +1816,7 @@
 						},
 						{
 							"name": "Get Conditional Order",
-							"_postman_id": "eb3e4c46-965d-4080-85d2-641ffbb45e02",
+							"id": "eb3e4c46-965d-4080-85d2-641ffbb45e02",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1863,7 +1858,7 @@
 						},
 						{
 							"name": "Query Conditional Order (real-time)",
-							"_postman_id": "fcf7d812-5c71-4544-b7fe-f02d89ea8e7f",
+							"id": "fcf7d812-5c71-4544-b7fe-f02d89ea8e7f",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1909,7 +1904,7 @@
 						},
 						{
 							"name": "Cancel Conditional Order",
-							"_postman_id": "ea53c9c9-cb8f-482f-a047-7b508bdc55f8",
+							"id": "ea53c9c9-cb8f-482f-a047-7b508bdc55f8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1955,7 +1950,7 @@
 						},
 						{
 							"name": "Cancel All Conditional Orders",
-							"_postman_id": "03fcb89b-9c39-4c24-a3ae-37fbfa20920c",
+							"id": "03fcb89b-9c39-4c24-a3ae-37fbfa20920c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1996,15 +1991,14 @@
 							"response": []
 						}
 					],
-					"_postman_id": "729b728c-a3b7-4acf-81b9-302c793cfca6",
-					"_postman_isSubFolder": true
+					"id": "729b728c-a3b7-4acf-81b9-302c793cfca6"
 				},
 				{
 					"name": "Position",
 					"item": [
 						{
 							"name": "My Position",
-							"_postman_id": "0f67ce19-3675-4643-85c3-47428f5aeb0a",
+							"id": "0f67ce19-3675-4643-85c3-47428f5aeb0a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2046,7 +2040,7 @@
 						},
 						{
 							"name": "Change Margin",
-							"_postman_id": "0df0f62a-2575-4ac5-8271-15e54115e209",
+							"id": "0df0f62a-2575-4ac5-8271-15e54115e209",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2092,7 +2086,7 @@
 						},
 						{
 							"name": "Set Trading-Stop",
-							"_postman_id": "45b5f6df-d41f-4a45-8b99-aa7c5f40a2bd",
+							"id": "45b5f6df-d41f-4a45-8b99-aa7c5f40a2bd",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2161,7 +2155,7 @@
 						},
 						{
 							"name": "Set Leverage",
-							"_postman_id": "95175dd1-f87b-43c9-a9ac-cb249e5d98e6",
+							"id": "95175dd1-f87b-43c9-a9ac-cb249e5d98e6",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2212,7 +2206,7 @@
 						},
 						{
 							"name": "User Trade Records",
-							"_postman_id": "8e85730e-5ea3-4169-9af3-96fd8ec5dd17",
+							"id": "8e85730e-5ea3-4169-9af3-96fd8ec5dd17",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2258,7 +2252,7 @@
 						},
 						{
 							"name": "Closed Profit and Loss",
-							"_postman_id": "7dce4a47-d532-407d-938a-dec3fdcdadb8",
+							"id": "7dce4a47-d532-407d-938a-dec3fdcdadb8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2305,7 +2299,7 @@
 						},
 						{
 							"name": "Position Mode Switch (only testnet for now)",
-							"_postman_id": "cfa9787e-5579-4403-9c4d-458d39bfd754",
+							"id": "cfa9787e-5579-4403-9c4d-458d39bfd754",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2351,7 +2345,7 @@
 						},
 						{
 							"name": "Full/Partial Position SL/TP Switch",
-							"_postman_id": "e6ab26c9-1a5b-42bb-9852-1bfeb837ed5c",
+							"id": "e6ab26c9-1a5b-42bb-9852-1bfeb837ed5c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2397,7 +2391,7 @@
 						},
 						{
 							"name": "Cross/Isolated Margin Switch",
-							"_postman_id": "484f61e5-7693-4728-a60a-46067aa692f3",
+							"id": "484f61e5-7693-4728-a60a-46067aa692f3",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2450,15 +2444,14 @@
 							"response": []
 						}
 					],
-					"_postman_id": "a82fad01-cfcd-4f17-8571-bbd6618c73a6",
-					"_postman_isSubFolder": true
+					"id": "a82fad01-cfcd-4f17-8571-bbd6618c73a6"
 				},
 				{
 					"name": "Risk Limit",
 					"item": [
 						{
 							"name": "Set Risk Limit",
-							"_postman_id": "8a3813d4-7b93-473c-b59b-2a99f9ecc1e1",
+							"id": "8a3813d4-7b93-473c-b59b-2a99f9ecc1e1",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2504,7 +2497,7 @@
 						},
 						{
 							"name": "Get Risk Limit",
-							"_postman_id": "efa02ffb-cec5-4bd1-b013-e90b5f88ff0e",
+							"id": "efa02ffb-cec5-4bd1-b013-e90b5f88ff0e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2533,15 +2526,14 @@
 							"response": []
 						}
 					],
-					"_postman_id": "edee28a4-f1c6-439e-89e5-0eda4c7cdb43",
-					"_postman_isSubFolder": true
+					"id": "edee28a4-f1c6-439e-89e5-0eda4c7cdb43"
 				},
 				{
 					"name": "Funding",
 					"item": [
 						{
 							"name": "Get the Last Funding Rate",
-							"_postman_id": "76a8857b-2aea-4939-be28-15448ad5bb6d",
+							"id": "76a8857b-2aea-4939-be28-15448ad5bb6d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2583,7 +2575,7 @@
 						},
 						{
 							"name": "My Last Funding Fee",
-							"_postman_id": "3206992b-7586-4dd7-b58a-1e21886a5a61",
+							"id": "3206992b-7586-4dd7-b58a-1e21886a5a61",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2625,7 +2617,7 @@
 						},
 						{
 							"name": "Predicted Funding Rate and My Funding Fee",
-							"_postman_id": "c44f6093-265a-4a9d-a30a-ded83f2d2652",
+							"id": "c44f6093-265a-4a9d-a30a-ded83f2d2652",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2666,18 +2658,17 @@
 							"response": []
 						}
 					],
-					"_postman_id": "1ceb20b6-1afc-421f-9c3a-0ea4343263e1",
-					"_postman_isSubFolder": true
+					"id": "1ceb20b6-1afc-421f-9c3a-0ea4343263e1"
 				}
 			],
-			"_postman_id": "e809d59e-7b7b-43f8-89d7-813066d60ddc"
+			"id": "e809d59e-7b7b-43f8-89d7-813066d60ddc"
 		},
 		{
 			"name": "General",
 			"item": [
 				{
 					"name": "Get api key info",
-					"_postman_id": "7bb631f8-ba59-4b03-8691-bed18cef485d",
+					"id": "7bb631f8-ba59-4b03-8691-bed18cef485d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2715,7 +2706,7 @@
 				},
 				{
 					"name": "LCP Info",
-					"_postman_id": "3fa8f352-25e0-44ce-8f51-e0f68a202e9d",
+					"id": "3fa8f352-25e0-44ce-8f51-e0f68a202e9d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2756,14 +2747,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "5d162558-3cd4-4362-be8b-89693c71ee8c"
+			"id": "5d162558-3cd4-4362-be8b-89693c71ee8c"
 		},
 		{
 			"name": "WalletDataEndpoints",
 			"item": [
 				{
 					"name": "Get Wallet Balance",
-					"_postman_id": "dd1877ef-2420-4461-8bef-0c0f18ec8615",
+					"id": "dd1877ef-2420-4461-8bef-0c0f18ec8615",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2800,7 +2791,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "59e0d72b-5fe9-4218-a60c-08bd162144ad"
+			"id": "59e0d72b-5fe9-4218-a60c-08bd162144ad"
 		}
 	],
 	"event": [
