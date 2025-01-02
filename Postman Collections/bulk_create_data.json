@@ -1,170 +1,156 @@
 {
-	"info": {
-		"_postman_id": "389dfcfd-5d0d-44a7-b27d-0cded7da01d8",
-		"name": "RunCSV",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "CreateAccountWithdrawalTransaction",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"exec": [
-							"var randomAmount = Math.random() * 1000; \r",
-							"var Ramount = parseFloat(randomAmount.toFixed(2));\r",
-							"pm.environment.set(\"randomAmount\",Ramount);\r",
-							"\r",
-							"//set up current date as process date\r",
-							"var d = new Date();\r",
-							"  // d = new Date(d.getFullYear(), d.getMonth(), d.getDate());\r",
-							"var currentDate = d.getFullYear() + \"-\" + (d.getMonth()+1) + \"-\" +d.getDate();\r",
-							"pm.environment.set(\"currentDate\",currentDate);"
-						],
-						"type": "text/javascript"
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"callerDetails\": {\r\n        \"userName\": \"M814577\",\r\n        \"country\": \"NZ\",\r\n        \"language\": \"EN\",\r\n        \"databaseIdentifier\": \"Sonata9AAT\"\r\n    },\r\n      \"account\": {\r\n          \"accountNumber\": {\r\n              \"accountNo\": \"{{account_number}}\"\r\n\r\n    }         \r\n      },\r\n        \"withdrawalDetail\": {\r\n            \"closeAccount\": false, \r\n            \"tradeInstructionBasis\": {\r\n                \"code\": \"CMIX\",\r\n                \"codeType\": \"TRIB\"\r\n                },\r\n            \"withdrawalMethod\": {\r\n                \"code\": \"WNET\",\r\n                \"codeType\": \"WMTH\"\r\n                },\r\n            \"withdrawalReason\": {\r\n                \"code\": \"FINH\",\r\n                \"codeType\": \"KSPW\"\r\n                },\r\n                \"effectiveDate\": \"2024-09-19\", \r\n                \"receivedDate\": \"{{currentDate}}\",\r\n                \"transactionReference\": \"MorganTesting\"\r\n\r\n        },\r\n          \"paymentDetails\": [\r\n              {\r\n                  \"amount\": {{randomAmount}},\r\n                  \"recipientPartyRef\": \"KDWParty\",\r\n                  \"bankAccountNo\": \"0307740985712000\",\r\n                  \"paymentMethod\": {\r\n                      \"code\": \"DC\",\r\n                      \"codeType\": \"PYMT\"\r\n                  }\r\n              }\r\n            ]\r\n}\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://nzakuap759wbcr2-front.elinux.westpac.co.nz/sonata/rest/sbs/transactionService/createAccountWithdrawal",
-					"protocol": "https",
-					"host": [
-						"nzakuap759wbcr2-front",
-						"elinux",
-						"westpac",
-						"co",
-						"nz"
-					],
-					"path": [
-						"sonata",
-						"rest",
-						"sbs",
-						"transactionService",
-						"createAccountWithdrawal"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "CreateReverseTransactionClosedAccount",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"callerDetails\": {\r\n        \"userName\": \"babel\",\r\n        \"country\": \"NZ\",\r\n        \"language\": \"EN\",\r\n        \"databaseIdentifier\": \"Sonata9AAT\"\r\n    },\r\n    \"transactionIdentifier\": {\r\n        \"id\": \"{{Transaction_Event_Id}}\",\r\n        \"account\": {\r\n            \"accountNumber\": {\r\n                \"accountNo\": \"{{Account_Number}}\"\r\n            }               \r\n        }\r\n    },\r\n    \"newzealand\": {\r\n       \r\n  }\r\n}\r\n  \r\n\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://nzakuap759wbcr2-front.elinux.westpac.co.nz/sonata/rest/sbs/transactionService/reverseTransaction",
-					"protocol": "https",
-					"host": [
-						"nzakuap759wbcr2-front",
-						"elinux",
-						"westpac",
-						"co",
-						"nz"
-					],
-					"path": [
-						"sonata",
-						"rest",
-						"sbs",
-						"transactionService",
-						"reverseTransaction"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "CreateReverseTransactionReason",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"callerDetails\": {\r\n        \"userName\": \"babel\",\r\n        \"country\": \"NZ\",\r\n        \"language\": \"EN\",\r\n        \"databaseIdentifier\": \"Sonata9AAT\"\r\n    },\r\n    \"transactionIdentifier\": {\r\n        \"id\": \"{{Transaction_Event_Id}}\",\r\n\r\n        \"account\": {\r\n            \"accountNumber\": {\r\n                \"accountNo\": \"{{Account_Number}}\"\r\n            }               \r\n        }\r\n    },\r\n    \"newzealand\": {\r\n         \"ksReason\": {\r\n      \"id\": 151457\r\n    }\r\n    \r\n    }\r\n}\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://nzakuap759wbcr2-front.elinux.westpac.co.nz/sonata/rest/sbs/transactionService/reverseTransaction",
-					"protocol": "https",
-					"host": [
-						"nzakuap759wbcr2-front",
-						"elinux",
-						"westpac",
-						"co",
-						"nz"
-					],
-					"path": [
-						"sonata",
-						"rest",
-						"sbs",
-						"transactionService",
-						"reverseTransaction"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+  "info": {
+    "_postman_id": "389dfcfd-5d0d-44a7-b27d-0cded7da01d8",
+    "name": "RunCSV",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "CreateAccountWithdrawalTransaction",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "var randomAmount = Math.random() * 1000; \r",
+              "var Ramount = parseFloat(randomAmount.toFixed(2));\r",
+              "pm.environment.set(\"randomAmount\",Ramount);\r",
+              "\r",
+              "//set up current date as process date\r",
+              "var d = new Date();\r",
+              "  // d = new Date(d.getFullYear(), d.getMonth(), d.getDate());\r",
+              "var currentDate = d.getFullYear() + \"-\" + (d.getMonth()+1) + \"-\" +d.getDate();\r",
+              "pm.environment.set(\"currentDate\",currentDate);"
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"callerDetails\": {\r\n        \"userName\": \"<REDACTED>\",\r\n        \"country\": \"NZ\",\r\n        \"language\": \"EN\",\r\n        \"databaseIdentifier\": \"<REDACTED>\"\r\n    },\r\n      \"account\": {\r\n          \"accountNumber\": {\r\n              \"accountNo\": \"{{account_number}}\"\r\n\r\n    }         \r\n      },\r\n        \"withdrawalDetail\": {\r\n            \"closeAccount\": false, \r\n            \"tradeInstructionBasis\": {\r\n                \"code\": \"CMIX\",\r\n                \"codeType\": \"TRIB\"\r\n                },\r\n            \"withdrawalMethod\": {\r\n                \"code\": \"WNET\",\r\n                \"codeType\": \"WMTH\"\r\n                },\r\n            \"withdrawalReason\": {\r\n                \"code\": \"FINH\",\r\n                \"codeType\": \"KSPW\"\r\n                },\r\n                \"effectiveDate\": \"2024-09-19\", \r\n                \"receivedDate\": \"{{currentDate}}\",\r\n                \"transactionReference\": \"<REDACTED>\"\r\n\r\n        },\r\n          \"paymentDetails\": [\r\n              {\r\n                  \"amount\": {{randomAmount}},\r\n                  \"recipientPartyRef\": \"<REDACTED>\",\r\n                  \"bankAccountNo\": \"<REDACTED>\",\r\n                  \"paymentMethod\": {\r\n                      \"code\": \"DC\",\r\n                      \"codeType\": \"PYMT\"\r\n                  }\r\n              }\r\n            ]\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://<REDACTED>/rest/sbs/transactionService/createAccountWithdrawal",
+          "protocol": "https",
+          "host": [
+            "<REDACTED>"
+          ],
+          "path": [
+            "rest",
+            "sbs",
+            "transactionService",
+            "createAccountWithdrawal"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CreateReverseTransactionClosedAccount",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"callerDetails\": {\r\n        \"userName\": \"<REDACTED>\",\r\n        \"country\": \"NZ\",\r\n        \"language\": \"EN\",\r\n        \"databaseIdentifier\": \"<REDACTED>\"\r\n    },\r\n    \"transactionIdentifier\": {\r\n        \"id\": \"{{Transaction_Event_Id}}\",\r\n        \"account\": {\r\n            \"accountNumber\": {\r\n                \"accountNo\": \"{{Account_Number}}\"\r\n            }               \r\n        }\r\n    },\r\n    \"newzealand\": {\r\n       \r\n  }\r\n}\r\n  \r\n\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://<REDACTED>/rest/sbs/transactionService/reverseTransaction",
+          "protocol": "https",
+          "host": [
+            "<REDACTED>"
+          ],
+          "path": [
+            "rest",
+            "sbs",
+            "transactionService",
+            "reverseTransaction"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CreateReverseTransactionReason",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"callerDetails\": {\r\n        \"userName\": \"<REDACTED>\",\r\n        \"country\": \"NZ\",\r\n        \"language\": \"EN\",\r\n        \"databaseIdentifier\": \"<REDACTED>\"\r\n    },\r\n    \"transactionIdentifier\": {\r\n        \"id\": \"{{Transaction_Event_Id}}\",\r\n\r\n        \"account\": {\r\n            \"accountNumber\": {\r\n                \"accountNo\": \"{{Account_Number}}\"\r\n            }               \r\n        }\r\n    },\r\n    \"newzealand\": {\r\n         \"ksReason\": {\r\n      \"id\": 151457\r\n    }\r\n    \r\n    }\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://<REDACTED>/rest/sbs/transactionService/reverseTransaction",
+          "protocol": "https",
+          "host": [
+            "<REDACTED>"
+          ],
+          "path": [
+            "rest",
+            "sbs",
+            "transactionService",
+            "reverseTransaction"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
 }
+				
